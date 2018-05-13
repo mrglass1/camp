@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#rails tutorial
 
-Things you may want to cover:
+# create new rails projects without tests
+# and specify database 
+rails new projectname -T --database=postgresql
 
-* Ruby version
+# scaffold a feature
+rails g scaffold Blog string:title text:body
 
-* System dependencies
+# display current routes
+rake routes
 
-* Configuration
+# markdown tutorial
+markdowntutorial.com
+leanpub.com
 
-* Database creation
+# controller create
+rails g controller Pages home about contact
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
