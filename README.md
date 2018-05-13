@@ -1,24 +1,8 @@
-# README
+# model generator
+rails g model Skill title:string percent_utilized:integer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# rails c
+# populate sample Skill data
+Skill.create!(title: "Rails", percent_utilized: 75)
+Skill.create!(title: "Rails", percent_utilized: 75)
+Skill.create!(title: "Rails", percent_utilized: 75)
