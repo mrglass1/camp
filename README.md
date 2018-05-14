@@ -37,3 +37,6 @@ rails g resource Portfolio title:string subtitle:string body:text main_image:tex
 
 # delete data from dev env
 rails db:setup
+
+# views - render images
+<%= image_tag portfolio_item.thumbnail %>
