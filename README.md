@@ -30,3 +30,10 @@ Skill.create!(title: "Rails", percent_utilized: 75)
 
 # rails resource generator
 rails g resource Portfolio title:string subtitle:string body:text main_image:text thumbnail:text
+
+# seeds file with iterator
+# sample data : placeholder image : "http://via.placeholder.com/600x400"
+
+
+# delete data from dev env
+rails db:setup
