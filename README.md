@@ -45,3 +45,12 @@ rails db:setup
 <%= link_to "Create New Item", new_portfolio_path %>
 <a href="portfolios/new" title="">Create New Item</a>
 <%= new_portfolio_url, subdomain: 'my subdomain'%> # url to use sub domain
+
+# sample index with link_to
+<% @portfolio_items.each do |portfolio_item| %>
+  <p><%= link_to portfolio_item.title, portfolio_path(portfolio_item)  %></p> # .id not required
+  <p><%= portfolio_item.subtitle %></p>
+  <p><%= portfolio_item.body %></p>
+  <%= image_tag portfolio_item.thumbnail unless portfolio_item.thumbnail.nil? %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
+<% end %>
