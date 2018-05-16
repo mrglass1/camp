@@ -40,3 +40,8 @@ rails db:setup
 
 # views - render images
 <%= image_tag portfolio_item.thumbnail %>
+
+# creating links
+<%= link_to "Create New Item", new_portfolio_path %>
+<a href="portfolios/new" title="">Create New Item</a>
+<%= new_portfolio_url, subdomain: 'my subdomain'%> # url to use sub domain
