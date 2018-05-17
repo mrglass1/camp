@@ -63,5 +63,9 @@ rails db:setup
 # setting root to home in routes.rb
 root to: 'pages#home'
 # other, left hand side is the controller, right hand side is the method
-get 'about', to: 'pages#about'
-get 'contact', to: 'pages#contact'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+#overriding and adding custom route methods
+  resources :portfolios, except: [:show]
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+
