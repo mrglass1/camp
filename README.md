@@ -58,3 +58,10 @@ rails db:setup
 # deleting and destroying records
 # portfolio_path the verb is GET by default, you have to pass the method for other verbs
 <%= link_to 'Delete portfolio item', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } %><
+
+# routes
+# setting root to home in routes.rb
+root to: 'pages#home'
+# other, left hand side is the controller, right hand side is the method
+get 'about', to: 'pages#about'
+get 'contact', to: 'pages#contact'
