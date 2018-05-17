@@ -54,3 +54,7 @@ rails db:setup
   <%= image_tag portfolio_item.thumbnail unless portfolio_item.thumbnail.nil? %>
   <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
 <% end %>
+
+# deleting and destroying records
+# portfolio_path the verb is GET by default, you have to pass the method for other verbs
+<%= link_to 'Delete portfolio item', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } %><
