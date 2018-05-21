@@ -74,3 +74,13 @@ e.g. install friendly_id gem -- see docos
 rails g migration add_slug_to_blogs slug:string:uniq
 rails console: Blog.create!(title: "my great title", body: "asddfdas") # will add a slug
 # replace every instance of slug in blog: User.find_each(&:save)
+
+# data stages - draft and publish mode for blog
+# enum - change state of data, used to represent workflows
+rails g migration add_post_status_to_blogs status:integer
+step 1: update schema with default value e.g.status, 
+step 2: in the controller, write enum status: { draft: 0, published: 1 }
+rails c: Blog.status.published! Blog.status.draft!
+rails c: Blog.published #returns all published
+
+
