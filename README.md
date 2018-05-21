@@ -69,3 +69,8 @@ root to: 'pages#home'
   resources :portfolios, except: [:show]
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
+# adding an additional field to a database table
+e.g. install friendly_id gem -- see docos
+rails g migration add_slug_to_blogs slug:string:uniq
+rails console: Blog.create!(title: "my great title", body: "asddfdas") # will add a slug
+# replace every instance of slug in blog: User.find_each(&:save)
